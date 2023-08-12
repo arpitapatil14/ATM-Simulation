@@ -4,6 +4,7 @@ public class Atm{
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter your balance:");
         float Balance = sc.nextFloat();
+        float Min_Balance = 1000; //minimum balance
         
         while(true){
             System.out.println("ATM Machine");
@@ -24,7 +25,7 @@ public class Atm{
                 case 2:
                     System.out.println("Enter the amount you want to withdraw:");
                     float Withdraw = sc.nextFloat();
-                    if(Balance>=Withdraw){
+                    if(Balance>=Withdraw && (Balance - Withdraw) >= Min_Balance){
                          float New_Balance = Balance - Withdraw;
                         System.out.println("Withdraw Successfully Completed");
                         System.out.println("Balance after Withdraw process :" + New_Balance);

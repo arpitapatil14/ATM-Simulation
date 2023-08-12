@@ -2,7 +2,8 @@ import java.util.Scanner;
 public class Atm{
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
-        float Balance = 5000.0f;
+        System.out.println("Enter your balance:");
+        float Balance = sc.nextFloat();
         
         while(true){
             System.out.println("ATM Machine");
